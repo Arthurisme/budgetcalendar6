@@ -2,7 +2,7 @@
 <FrameLayout android:layout_width="fill_parent"
 	android:layout_height="fill_parent" style="@style/common_bg"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:lineBarView="http://schemas.android.com/apk/res/com.mymoney">
+	xmlns:lineBarView="http://schemas.android.com/apk/res-auto">
 	<LinearLayout android:orientation="vertical" android:id="@+id/main_ly"
 		android:layout_width="fill_parent" android:layout_height="fill_parent">
 		<TextView android:id="@+id/title_tv" android:text="记账"
@@ -12,7 +12,8 @@
 			<RadioButton android:id="@+id/payout_tab_rb"
 				android:background="@drawable/widget_btn_radio_label_background"
 				android:layout_width="160.0dip" android:layout_height="46.0dip"
-				android:button="@drawable/payout_tab_btn_radio" android:text="支出" />
+				android:button="@drawable/payout_tab_btn_radio" android:text="支出"
+                android:checked="false" />
 			<RadioButton android:id="@+id/income_tab_rb"
 				android:background="@drawable/widget_btn_radio_label_background"
 				android:layout_width="160.0dip" android:layout_height="46.0dip"
