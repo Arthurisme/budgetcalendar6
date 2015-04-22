@@ -75,6 +75,16 @@
     <string name="message_error_system">System error</string>
     <string name="message_delete_ok">Delete success.</string>
     <string name="message_error_edit">Sorry, only income and expense can edit.</string>
+    <!-- NavExpenseActivity .xml -->
+    <string name="income">Income</string>
+    <string name="payout">Pay Out</string>
+    <string name="lists">Lists</string>
+    <string name="month">Month</string>
+    <string name="in_calculating">Calculating...</string>
+
+
+
+
 
     <!-- SettingAddOrEditAccountActivity -->
     <string name="edit_point">Auto count, no need input</string>
@@ -98,4 +108,11 @@
     <string name="link_button">Link to Dropbox</string>
     <string name="task_label">New Task</string>
     <string name="add_button">Add</string>
+    <string name="total_income">Total Income</string>
+    <string name="total_spend">Total Spend</string>
+    <string name="budget_remain">Budget remain</string>
+
+    <string name="today">Today</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
 </resources>
