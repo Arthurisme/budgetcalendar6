@@ -1,5 +1,6 @@
 package com.uangel.suishouji.utility;
 
+import com.uangel.suishouji.MainActivity;
 import com.uangel.suishouji.R;
 
 import android.content.Context;
@@ -21,20 +22,58 @@ public class MyProcessBar extends RelativeLayout {
 	private LayoutParams params;
 	private Handler mHandler;
 	private boolean isModified = false;
-	private Thread mThread = new Thread(new Runnable() {
-		@Override
-		public void run() {
-				try {
-					mThread.sleep(20);
-					m_process++;
-					setProgress(m_process);
-					reflashPorcess(m_process);// 界面的修改，交由线程来处理
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-		}
-	});
+//	private Thread mThread = new Thread(new Runnable() {
+//		@Override
+//		public void run() {
+//				try {
+//					mThread.sleep(20);
+//					m_process++;
+//					setProgress(m_process);
+//					reflashPorcess(m_process);// 界面的修改，交由线程来处理
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//		}
+//	});
+
+    private Thread mThread = new Thread() {
+        @Override
+        public void run() {
+            try {
+
+
+
+                mThread.sleep(20);
+
+                synchronized(this)
+                {
+
+                    //Current_Activity.this.runOnUiThread(new Runnable()
+
+                    Runnable runnable = new Runnable(){
+
+
+
+                    @Override
+                    public void run() {
+
+
+
+                    m_process++;
+
+                    setProgress(m_process);
+
+                    reflashPorcess(m_process);// 界面的修改，交由线程来处理
+
+                }}
+                ;}
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    };
 
 	public MyProcessBar(Context context, AttributeSet attrs) {
 		super(context, attrs);

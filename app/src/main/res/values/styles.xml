@@ -224,6 +224,7 @@
 	</style>
 	<style name="main_money_label">
 		<item name="android:textColor">#ff7e430b</item>
+
 		<item name="android:gravity">right</item>
 		<item name="android:layout_gravity">center_vertical</item>
 		<item name="android:paddingLeft">10.0dip</item>
@@ -232,8 +233,9 @@
 	</style>
 	<style name="main_money_label_hdpi" parent="@style/main_money_label">
 		<item name="android:paddingLeft">15.0px</item>
-		<item name="android:layout_width">120.0px</item>
+		<item name="android:layout_width">160.0px</item>
 		<item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10.0dip</item>
 	</style>
 	<style name="main_money_label_ldpi" parent="@style/main_money_label">
 		<item name="android:paddingLeft">8.0px</item>
