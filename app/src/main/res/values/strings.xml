@@ -54,6 +54,16 @@
     <string name="budget_max_expense_tips">Total budget this month</string>
     <string name="budget_category_expense_tips">Set total budget for this month type</string>
 
+
+    <string name="enter_amount">Enter Amount</string>
+    <string name="account">Account</string>
+    <string name="seller">Seller</string>
+    <string name="record">Record</string>
+
+    <string name="spend_out">Spend Out</string>
+    <string name="expense_note">Note</string>
+
+
     <!-- memo——MyDialog -->
     <string name="dialog_memo_title">Notes</string>
     <string name="dialog_memo_ok">Save</string>
@@ -93,6 +103,18 @@
     <string name="error_balance_empty">Rest amount can not empty!</string>
     <string name="error_balance_number">Rest data is not correct, must be number!</string>
     <string name="error_system">Sorry,operator failed!</string>
+    <string name="transfer">Transfer</string>
+    <string name="manage_account">Account Managing</string>
+    <!-- SettingAddOrEditAccountActivity header.xml -->
+    <string name="total_asset">Total Asset</string>
+    <string name="total_debt">Total Debt</string>
+
+    <string name="account_name">Name</string>
+    <string name="please_enter_account_name">Please Enter Account Name</string>
+    <string name="account_remain">Remain</string>
+    <string name="please_enter_account_remain">Please Enter Account Remain</string>
+    <string name="category">category</string>
+    <string name="sub_category">Sub-category</string>
 
     <!-- TransferActivity -->
     <string name="transfer_amount_empty">Amount can not be empty!</string>
@@ -100,10 +122,21 @@
     <string name="transfer_amount_number">Must be number!</string>
     <string name="transfer_ok">Transfer success!</string>
 
+    <string name="transfer_in">Transfer In</string>
+    <string name="please_enter_transfer_amount">Please Enter Transfer Amount</string>
+    <string name="transfer_out">Transfer Out</string>
+    <string name="transfer_amount">Amount</string>
+    <string name="other_info">Other Information</string>
+    <string name="transfer_time">Time</string>
+    <string name="transfer_item">Item</string>
+    <string name="transfer_note">Note</string>
+
     <!-- Budget -->
     <string name="balance_amount_title">Rest Amount：</string>
     <string name="budget_ok">Setting success!</string>
-
+    <string name="budget_str">Budget</string>
+    <string name="category_budget">Budget</string>
+    <string name="total_budget">Total Budget</string>
 
     <string name="link_button">Link to Dropbox</string>
     <string name="task_label">New Task</string>
@@ -115,4 +148,9 @@
     <string name="today">Today</string>
     <string name="this_week">This Week</string>
     <string name="this_month">This Month</string>
+    <string name="setting_account">Set Account</string>
+
+
+
+
 </resources>

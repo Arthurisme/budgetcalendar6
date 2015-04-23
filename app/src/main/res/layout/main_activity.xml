@@ -62,13 +62,13 @@
                          batteryView:batteryContentLowImage="@drawable/widget_battery_low" batteryView:overlayerImage="@drawable/widget_battery_overlayer" />
         -->
     </LinearLayout>
-    <Button android:background="@drawable/common_transparence" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <Button android:background="@drawable/common_transparence" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="3" />
     <Button android:layout_gravity="center_horizontal" android:id="@+id/add_expense_quickly_btn" android:background="@drawable/main_add_expense_quickly" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_weight="1" />
-    <Button android:background="@drawable/common_transparence" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="250dp"
+        android:layout_weight="0.5" />
+    <Button android:background="@drawable/common_transparence" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.5" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="237dp"
         android:layout_weight="2">
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <RelativeLayout android:orientation="horizontal" android:id="@+id/today_row_rl" style="@style/row_stat_hdpi">
                 <FrameLayout android:id="@+id/today_icon_fl" style="@style/main_row_stat_icon_hdpi">
                     <ImageView android:layout_gravity="center_vertical" android:id="@+id/today_icon_iv" android:background="@drawable/main_today" android:layout_width="wrap_content" android:layout_height="wrap_content" />
@@ -103,28 +103,32 @@
                 <ImageView style="@style/main_row_go_detail_hdpi" />
             </RelativeLayout>
         </LinearLayout>
-        <RelativeLayout android:id="@+id/nav_ly" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <ImageView style="@style/nav_bar_bg_hdpi"
-                android:contentDescription="This is the bottom bar for nav" />
+        <RelativeLayout android:id="@+id/nav_ly" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView style="@style/nav_bar_bg_hdpi" />
         </RelativeLayout>
         <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <Button android:id="@+id/add_expense_btn" android:background="@drawable/main_add_expense_btn"
                 style="@style/nav_btn_hdpi"
-                android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_weight="1" />
             <Button android:id="@+id/nav_report_btn" android:background="@drawable/main_report_btn"
-                style="@style/nav_btn_hdpi" />
-            <Button android:id="@+id/nav_account_btn" android:background="@drawable/main_account_btn" style="@style/nav_btn_hdpi" android:layout_marginLeft="60px"/>
-            <Button android:id="@+id/nav_budget_btn" android:background="@drawable/main_budget_btn"  style="@style/nav_btn_hdpi"  android:layout_marginLeft="115px"/>
-            <Button android:id="@+id/nav_setting_btn" android:background="@drawable/main_setting_btn" style="@style/nav_btn_hdpi" />
+                style="@style/nav_btn_hdpi"
+                android:layout_weight="1" />
+            <Button android:id="@+id/nav_account_btn" android:background="@drawable/main_account_btn" style="@style/nav_btn_hdpi" android:layout_marginLeft="0dp"
+                android:layout_weight="1" />
+            <Button android:id="@+id/nav_budget_btn" android:background="@drawable/main_budget_btn"  style="@style/nav_btn_hdpi"  android:layout_marginLeft="0dp"
+                android:layout_weight="1" />
+            <Button android:id="@+id/nav_setting_btn" android:background="@drawable/main_setting_btn" style="@style/nav_btn_hdpi"
+                android:layout_weight="1" />
         </LinearLayout>
-        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
-            android:id="@+id/">
-            <TextView android:id="@+id/add_expense_tv" android:visibility="gone" android:text="@string/nav_add_expense" style="@style/nav_text_hdpi" />
-            <TextView android:id="@+id/nav_report_tv" android:text="@string/nav_report" android:visibility="gone" style="@style/nav_text_hdpi" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@+id/add_expense_tv"
+                android:text="@string/nav_add_expense" style="@style/nav_text_hdpi" />
+            <TextView android:id="@+id/nav_report_tv" android:text="@string/nav_report"
+                style="@style/nav_text_hdpi" />
             <TextView android:id="@+id/nav_account_tv" android:text="@string/nav_account" style="@style/nav_text_hdpi" />
             <TextView android:id="@+id/nav_budget_tv" android:text="@string/nav_budget" style="@style/nav_text_hdpi" />
-            <TextView android:id="@+id/nav_setting_tv" android:text="@string/nav_setting" android:visibility="gone" style="@style/nav_text_hdpi" />
+            <TextView android:id="@+id/nav_setting_tv" android:text="@string/nav_setting"
+                style="@style/nav_text_hdpi" />
         </LinearLayout>
-    </Lin>
+    </FrameLayout>
 </LinearLayout>
