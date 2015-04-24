@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.uangel.suishouji.utility.Utility;
+
 public class BudgetListAdapter extends BaseAdapter {
 	BudgetActivity 	budget_activity;
 	ArrayList<Object> 		budget;
@@ -44,7 +46,7 @@ public class BudgetListAdapter extends BaseAdapter {
 		
 			convertView = inflater.inflate(R.layout.budget_list_item, null);
 			BudgetData data = (BudgetData)item;
-			String cost = String.format("￥%.2f", data.balance);
+			String cost = Utility.CurrencyCode() +String.format("%.2f", data.balance);
 			
 			((ImageView)convertView.findViewById(R.id.category_icon_iv)).setBackgroundResource(data.category);
 			((TextView)convertView.findViewById(R.id.category_name_tv)).setText(data.name);

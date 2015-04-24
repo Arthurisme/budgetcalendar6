@@ -7,6 +7,7 @@ import java.util.GregorianCalendar;
 
 import com.uangel.suishouji.db.MyDbHelper;
 import com.uangel.suishouji.utility.MyProcessBar;
+import com.uangel.suishouji.utility.Utility;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -20,6 +21,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static com.uangel.suishouji.utility.Utility.getMonthNameFromNumber;
+
+
 public class MainActivity extends Activity implements OnClickListener {
 	/** Called when the activity is first created. */
 	private final int DATE_MOTH_DAY = 1;
@@ -28,6 +32,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Calendar calendar = Calendar.getInstance();
 	private String year = null;
 	private String month = null;
+    private int monthInt = 0;
 	private String day = null;
 	private String weekStart = null;
 	private String weekEnd = null;
@@ -204,7 +209,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		// text
 //		calendar.set(2011, 0, 3);
 //		db.insert("TBL_EXPENDITURE", new String[] {"AMOUNT","DATE"}, new String[] {"100",format(calendar.getTime())});
-		month_tv.setText(month);
+        String monthStr=getMonthNameFromNumber(month);
+		month_tv.setText(monthStr);
 		
 		Cursor cursor = db.rawQuery("select sum(AMOUNT) from TBL_INCOME",null);
 		if (cursor.moveToNext()) {

@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.uangel.suishouji.utility.Utility;
+
 public class TransactionListAdapter extends BaseAdapter {
 
 	NavExpenseActivity 	navview;
@@ -58,7 +60,7 @@ public class TransactionListAdapter extends BaseAdapter {
 				((ImageView)convertView.findViewById(R.id.category_icon_iv)).setBackgroundResource(icon);
 				((TextView)convertView.findViewById(R.id.category_name_tv)).setText(name);
 				
-				String cost = String.format("￥%.2f", data.money);
+				String cost = Utility.CurrencyCode() +String.format("%.2f", data.money);
 				TextView cost_tv = (TextView)convertView.findViewById(R.id.cost_tv);
 				if (data.type == 0)
 					cost_tv.setTextColor(navview.getResources().getColor(R.color.transaction_income_amount));

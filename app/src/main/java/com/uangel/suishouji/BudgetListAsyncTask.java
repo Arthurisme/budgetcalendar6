@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.uangel.suishouji.utility.Utility;
+
 public class BudgetListAsyncTask extends AsyncTask<BudgetActivity, Void, Void> {
 
 	BudgetActivity budget_activity;
@@ -41,7 +43,7 @@ public class BudgetListAsyncTask extends AsyncTask<BudgetActivity, Void, Void> {
 			budget_activity.findViewById(R.id.header_empty_iv).setVisibility(View.VISIBLE);
 		}
 		
-		((TextView)budget_activity.findViewById(R.id.budget_amount_tv)).setText(String.format("￥%.2f", commondata.budget_amount));
+		((TextView)budget_activity.findViewById(R.id.budget_amount_tv)).setText(Utility.CurrencyCode() +String.format("%.2f", commondata.budget_amount));
 		budget_activity.budget_lv.setAdapter(new BudgetListAdapter(budget_activity,(ArrayList<Object>)budgets.clone()));
 		budget_activity.budget_lv.setSelection(0);
 		super.onPostExecute(result);

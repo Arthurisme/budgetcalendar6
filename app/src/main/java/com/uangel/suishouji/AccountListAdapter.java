@@ -9,6 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.uangel.suishouji.utility.Utility;
+
+
 public class AccountListAdapter extends BaseAdapter {
 	SettingAccountActivity 	acc_activity;
 	ArrayList<Object> 		accounts;
@@ -47,10 +50,12 @@ public class AccountListAdapter extends BaseAdapter {
 			
 			String subcatname = commondata.accountsubcategory.get(data.category).name;
 			String cost;
-			if (data.balance >= 0)
-				cost = String.format("￥%.2f", data.balance);
+			if (data.balance >= 0) {
+
+                cost = Utility.CurrencyCode() + String.format("%.2f", data.balance);
+            }
 			else
-				cost = String.format("-￥%.2f", -data.balance);
+				cost = "-"+Utility.CurrencyCode() +String.format("$%.2f", -data.balance);
 			
 			((TextView)convertView.findViewById(R.id.account_name_tv)).setText(data.name);
 			((TextView)convertView.findViewById(R.id.second_level_account_group_name_tv)).setText(subcatname);
